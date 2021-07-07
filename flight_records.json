@@ -33,32 +33,6 @@
                     "seat": "22B"
                 }
             ]
-        },
-        {
-            "id": "flightID",
-            "destination": "destination",
-            "origin": "origin",
-            "vehicle": {
-                "capacity": "5",
-                "age": "200",
-                "fuel": "6",
-                "id": "testID"
-            },
-            "duration": "duration",
-            "passenger": []
-        },
-        {
-            "id": "flightID",
-            "destination": "destination",
-            "origin": "origin",
-            "vehicle": {
-                "capacity": "5",
-                "age": "200",
-                "fuel": "6",
-                "id": "testID"
-            },
-            "duration": "duration",
-            "passenger": []
         }
     ]
 }

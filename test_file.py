@@ -10,7 +10,7 @@ class Testing(unittest.TestCase):
     plane = Plane(5, "200", "6")
     plane.add_to_record()
     passenger = Passenger("fName", "lName", "passportID", 23)
-    flight = Flight("flightID", "destination","origin", plane, "duration")
+    flight = Flight("flightID", "destination", "origin", plane, "duration")
     passenger.add_record()
 
     def test_passenger_create(self):
@@ -33,7 +33,6 @@ class Testing(unittest.TestCase):
                 if flight["id"] == "FlightID":
                     self.assertEquals(flight["destination"], "destination")
                     break
-
 
     def test_vehicle(self):
         with open("vehicle_records.json", "r") as file:
@@ -61,13 +60,14 @@ class Testing(unittest.TestCase):
     def test_add_passenger_to_flight(self):
         self.flight.add_passenger(self.passenger)
         flight_json = json_open("flight_records.json")
+        flight_json = flight_json["flight"]
         for flight in flight_json:
-            if flight["flightID"] == "flightid":
-                for passenger in flight:
+            if flight["id"] == "flightID":
+                for passenger in flight["passenger"]:
                     if passenger["passport"] == "passportID":
-                        self.assertEquals(passenger["fName"], "fName")
-                        self.assertEquals(passenger["lName"], "lName")
-                        self.assertEquals(passenger["age"], "age")
+                        self.assertEquals(passenger["fName"], "fname")
+                        self.assertEquals(passenger["lName"], "lname")
+                        self.assertEquals(passenger["age"], 23)
                         break
 
     def test_report(self):
@@ -77,4 +77,4 @@ class Testing(unittest.TestCase):
 def json_open(file_name, perms="r"):
     with open(file_name, perms) as file:
         json_file = json.load(file)
-        return json_file[0]
+        return json_file

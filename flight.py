@@ -29,6 +29,16 @@ class Flight:
         except FileNotFoundError as err:
             return "File not found"
 
+    def add_passenger(self, passenger):
+        with open("flight_records.json", "r+") as file:
+            data = json.load(file)
+            for index, flight in enumerate(data["flight"]):
+                if flight["id"] == self.flight_id:
+                    break
+            data["flight"][index]["passenger"].append(passenger.dic)
+            file.seek(0)
+            json.dump(data, file, indent=4)
+
     def generate_flight_attendees(self):
         try:
             identity = open("passengers.json", "r")
@@ -51,7 +61,7 @@ class Flight:
         try:
             with open("flights.json", "r") as file:
                 json_file = json.load(file)
-                flights_json = json_file["flight_trip"]
+                flights_json = json_file["flight"]
 
             # Iterate through dict to see if flight id is the same as what was inputted
             for flight in flights_json:
