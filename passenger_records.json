@@ -57,30 +57,6 @@
             "fName": "fname",
             "lName": "lname",
             "age": 23
-        },
-        {
-            "passport": "passportID",
-            "fName": "fname",
-            "lName": "lname",
-            "age": 23
-        },
-        {
-            "passport": "passportID",
-            "fName": "fname",
-            "lName": "lname",
-            "age": 23
-        },
-        {
-            "passport": "passportID",
-            "fName": "fname",
-            "lName": "lname",
-            "age": 23
-        },
-        {
-            "passport": "passportID",
-            "fName": "fname",
-            "lName": "lname",
-            "age": 23
         }
     ]
 }

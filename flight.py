@@ -9,6 +9,7 @@ class Flight:
         self.vehicle = vehicle
         self.duration = duration
         self.add_records()
+        self.passenger = []
 
     def add_records(self):
         new_flight = {'id': self.flight_id,
@@ -38,6 +39,10 @@ class Flight:
             data["flight"][index]["passenger"].append(passenger.dic)
             file.seek(0)
             json.dump(data, file, indent=4)
+        self.passenger.append(passenger)
+
+    def report(self):
+        return report_string(self.flight_id)
 
     def generate_flight_attendees(self):
         try:
@@ -90,3 +95,21 @@ class Flight:
     # create_flight("JH255", "Portugal", "England", "Plane", "200")
     # manage_flight_trips("W1", "Greece", "USA", "Helicopter", "120")
     # print(generate_flight_attendees())
+
+
+def report_string(flight_id=None):
+    report_list = []
+    if flight_id is None:
+        return "Sorry there is no flights for this flight ID"
+    else:
+        with open("flight_records.json") as file:
+            json_file = json.load(file)
+            for index, flight in enumerate(json_file["flight"]):
+                if flight["id"] == flight_id:
+                    break
+            for passenger in json_file["flight"][index]["passenger"]:
+                fname = passenger["fName"]
+                lname = passenger["lName"]
+                passport = passenger["passport"]
+                report_list.append((fname, lname, passport))
+        return report_list

@@ -7,7 +7,7 @@ from flight import Flight
 
 
 class Testing(unittest.TestCase):
-    plane = Plane(5, "200", "6")
+    plane = Plane(5, 200, 6)
     plane.add_to_record()
     passenger = Passenger("fName", "lName", "passportID", 23)
     flight = Flight("flightID", "destination", "origin", plane, "duration")
@@ -71,7 +71,7 @@ class Testing(unittest.TestCase):
                         break
 
     def test_report(self):
-        self.assertIsNotNone(self.flight.report())
+        self.assertIsInstance(self.flight.report(), list)
 
 
 def json_open(file_name, perms="r"):
