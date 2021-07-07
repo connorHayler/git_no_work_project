@@ -36,8 +36,8 @@
         },
         {
             "id": "flightID",
-            "destination": "destination",
-            "origin": "origin",
+            "destination": "bad",
+            "origin": "people",
             "vehicle": {
                 "capacity": "5",
                 "age": "200",
@@ -45,38 +45,8 @@
                 "id": "testID",
                 "colour": "salmon pink"
             },
-            "duration": "duration",
+            "duration": 20000,
             "passenger": [
-                {
-                    "passport": "passportID",
-                    "fName": "fname",
-                    "lName": "lname",
-                    "age": 23
-                },
-                {
-                    "passport": "passportID",
-                    "fName": "fname",
-                    "lName": "lname",
-                    "age": 23
-                },
-                {
-                    "passport": "passportID",
-                    "fName": "fname",
-                    "lName": "lname",
-                    "age": 23
-                },
-                {
-                    "passport": "passportID",
-                    "fName": "fname",
-                    "lName": "lname",
-                    "age": 23
-                },
-                {
-                    "passport": "passportID",
-                    "fName": "fname",
-                    "lName": "lname",
-                    "age": 23
-                },
                 {
                     "passport": "passportID",
                     "fName": "fname",
@@ -90,76 +60,6 @@
                     "age": 23
                 }
             ]
-        },
-        {
-            "id": "flightID",
-            "destination": "destination",
-            "origin": "origin",
-            "vehicle": {
-                "capacity": "5",
-                "age": "200",
-                "fuel": "6",
-                "id": "testID",
-                "colour": "salmon pink"
-            },
-            "duration": "duration",
-            "passenger": []
-        },
-        {
-            "id": "flightID",
-            "destination": "destination",
-            "origin": "origin",
-            "vehicle": {
-                "capacity": "5",
-                "age": "200",
-                "fuel": "6",
-                "id": "testID",
-                "colour": "salmon pink"
-            },
-            "duration": "duration",
-            "passenger": []
-        },
-        {
-            "id": "flightID",
-            "destination": "destination",
-            "origin": "origin",
-            "vehicle": {
-                "capacity": "5",
-                "age": "200",
-                "fuel": "6",
-                "id": "testID",
-                "colour": "salmon pink"
-            },
-            "duration": "duration",
-            "passenger": []
-        },
-        {
-            "id": "flightID",
-            "destination": "destination",
-            "origin": "origin",
-            "vehicle": {
-                "capacity": "5",
-                "age": "200",
-                "fuel": "6",
-                "id": "testID",
-                "colour": "salmon pink"
-            },
-            "duration": "duration",
-            "passenger": []
-        },
-        {
-            "id": "flightID",
-            "destination": "destination",
-            "origin": "origin",
-            "vehicle": {
-                "capacity": "5",
-                "age": "200",
-                "fuel": "6",
-                "id": "testID",
-                "colour": "salmon pink"
-            },
-            "duration": "duration",
-            "passenger": []
         },
         {
             "id": "flightID",
