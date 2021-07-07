@@ -5,6 +5,11 @@ class Aircraft:
         self.age = age
         self.id = "testID"
         self.fuel = fuel_capacity
+        self.dic = {"capacity": f"{self.capacity}",
+                    "age": f"{self.age}",
+                    "fuel": f"{self.fuel}",
+                    "id": f"{self.id}"
+                    }
 
     def fly_between(self, city1, city2):
         pass

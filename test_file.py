@@ -3,14 +3,14 @@ import json
 import pytest
 from passenger import Passenger
 from plane import Plane
-# from flight import Flight
+from flight import Flight
 
 
 class Testing(unittest.TestCase):
     plane = Plane(5, "200", "6")
     plane.add_to_record()
     passenger = Passenger("fName", "lName", "passportID", 23)
-    # flight = Flight("origin", "destination", plane, "departure time")
+    flight = Flight("flightID", "destination","origin", plane, "duration")
     passenger.add_record()
 
     def test_passenger_create(self):
@@ -30,10 +30,10 @@ class Testing(unittest.TestCase):
             json_file = json.load(file)
             flight_json = json_file["flight"]
             for flight in flight_json:
-                if flight["flightID"] == "FlightID":
-                    destination = flight["destination"]
+                if flight["id"] == "FlightID":
+                    self.assertEquals(flight["destination"], "destination")
                     break
-            self.assertEquals(destination, "destination")
+
 
     def test_vehicle(self):
         with open("vehicle_records.json", "r") as file:

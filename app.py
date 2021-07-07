@@ -5,7 +5,7 @@ import json
 def manage_flight_trips(flight_id, destination, origin, vehicle, duration, passenger_id, seat):
     flight_trp = flight_id
     # Open json file as read only to get a dict
-    with open("flight_trips.json", "r") as file:
+    with open("flight_records.json", "r") as file:
         json_file = json.load(file)
         flights_json = json_file["flight_trip"]
 
@@ -25,7 +25,7 @@ def manage_flight_trips(flight_id, destination, origin, vehicle, duration, passe
                         passenger["seat"] = seat
 
                 # Write changes to the json file
-                with open("flight_trips.json", "w") as f:
+                with open("flight_records.json", "w") as f:
                     json.dump(json_file, f)  # serializing back to the original file
 
 

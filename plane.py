@@ -7,13 +7,8 @@ class Plane(Aircraft):
         super().__init__(capacity, age, "PLANE", fuel_capacity)
 
     def add_to_record(self):
-        dic = {"capacity": f"{self.capacity}",
-               "age": f"{self.age}",
-               "fuel": f"{self.fuel}",
-               "id": f"{self.id}"
-               }
         with open("vehicle_records.json", "r+") as file:
             json_file = json.load(file)
-            json_file["vehicle"]["plane"].append(dic)
+            json_file["vehicle"]["plane"].append(self.dic)
             file.seek(0)
             json.dump(json_file, file, indent=4)
